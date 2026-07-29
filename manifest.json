@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Task Hub",
+  "version": "1.0",
+  "description": "タスク管理・タブ管理・AI連携を統合した仕事管理拡張機能",
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "48": "images/icon-48.png",
+      "96": "images/icon-96.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/index.js",
+    "type": "module"
+  },
+  "options_page": "options/index.html",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ]
+}
