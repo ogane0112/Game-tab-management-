@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Hub</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>Task Hub</h1>
+      <button id="open-options" title="設定">⚙️</button>
+    </header>
+
+    <section class="toolbar">
+      <select id="filter-category">
+        <option value="all">すべてのカテゴリ</option>
+      </select>
+      <select id="filter-status">
+        <option value="all">すべてのステータス</option>
+        <option value="todo">未着手</option>
+        <option value="in_progress">進行中</option>
+        <option value="done">完了</option>
+      </select>
+      <div class="progress">
+        <span id="progress-label">0%</span>
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+      </div>
+    </section>
+
+    <form id="task-form" class="task-form">
+      <input id="task-title" type="text" placeholder="新しいタスク..." required />
+      <select id="task-category">
+        <option value="本業">本業</option>
+        <option value="副業">副業</option>
+        <option value="投資">投資</option>
+        <option value="学習">学習</option>
+      </select>
+      <select id="task-priority">
+        <option value="high">高</option>
+        <option value="medium" selected>中</option>
+        <option value="low">低</option>
+      </select>
+      <input id="task-due" type="date" />
+      <button type="button" id="ai-classify-btn" title="AIにカテゴリ・優先度を推定させる">✨</button>
+      <button type="submit">追加</button>
+    </form>
+
+    <ul id="task-list" class="task-list"></ul>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
