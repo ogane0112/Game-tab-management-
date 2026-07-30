@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Hub 設定</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Task Hub 設定</h1>
+
+    <section class="settings-section">
+      <h2>AI連携</h2>
+      <label for="ai-api-key">Anthropic APIキー</label>
+      <input id="ai-api-key" type="password" placeholder="sk-ant-..." autocomplete="off" />
+
+      <label for="ai-endpoint">APIエンドポイント（任意）</label>
+      <input id="ai-endpoint" type="text" placeholder="https://api.anthropic.com/v1/messages" />
+
+      <label for="ai-model">モデル（任意）</label>
+      <input id="ai-model" type="text" placeholder="claude-sonnet-4-6" />
+    </section>
+
+    <section class="settings-section">
+      <h2>カテゴリ管理</h2>
+      <ul id="category-list" class="category-list"></ul>
+      <div class="category-add">
+        <input id="new-category" type="text" placeholder="新しいカテゴリ名" />
+        <button id="add-category-btn">追加</button>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="save-btn">保存</button>
+      <span id="save-status" class="save-status"></span>
+    </div>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
